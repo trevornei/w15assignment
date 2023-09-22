@@ -53,6 +53,7 @@ function RandomImage({ src }) {
   return (
     <img
       src={src}
+      title='I memeLord supremeLord - Keyboard Cat They SAY'
       alt="Random Placement"
       style={{
         position: 'absolute',
@@ -61,6 +62,7 @@ function RandomImage({ src }) {
         width: '100px',
         height: '100px',
       }}
+      
     />
   );
 }
