@@ -13,7 +13,8 @@ export default function App() {
     <div className="w-screen h-screen flex flex-col items-center justify-start">
       <AppTitle/>
       <RandomImage src={KeyboardCat}/>
-      {/* <RandomImage src={KeyboardCat}/>
+      {/* 
+      <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/>

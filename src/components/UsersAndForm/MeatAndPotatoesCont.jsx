@@ -26,6 +26,16 @@ export default function MeatAndPotatoesCont() {
   }, [])  
 
   const deleteUser = (users) => {
+    fetch(URL, {
+      method: "DELETE", 
+      headers: {
+        'content-type': 'application/json',
+      },
+    }) .then((response) => {
+      if (response.status === 200) {
+        setUsers(users.filter((person) => person.id !== users.id))
+      }
+    })
   }
 
   const updateUser = (users) => {
