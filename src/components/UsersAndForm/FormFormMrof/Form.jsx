@@ -1,7 +1,8 @@
 import React from 'react'
 import FormInput from './FormInput'
 
-export default function Form() {
+export default function Form({ postNewUser }) {
+
   return (
     <div className='h-auto absolute'>
         <div className="z-0 w-1/2 h-3/5 bg-violet-400 rounded-s-lg  inset-y-0 right-0 relative"></div>

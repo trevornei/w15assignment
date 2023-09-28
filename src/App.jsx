@@ -1,5 +1,4 @@
-import { React, useState, useEffect } from 'react'
-import Footer from './components/Footer'
+import { React } from 'react'
 import AppTitle from './components/AppTitle'
 import MeatAndPotatoesCont from './components/UsersAndForm/MeatAndPotatoesCont'
 import RandomImage from './RandomImage'
@@ -208,7 +207,6 @@ export default function App() {
       <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/> */}
       <MeatAndPotatoesCont/>
-      <Footer/>
     </div>
   )
 }
