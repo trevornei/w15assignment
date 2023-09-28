@@ -16,6 +16,9 @@ export default function User({ user, deleteUser }) {
                 <div className="p-2">
                   <h3 className="text-sm font-bold">Company: {user.company}</h3>
                 </div>
+                <div className="p-2">
+                  <img src={user.avatar} alt="Users Avatar" />
+                </div>
           </div>
           <Update users={user}/>
           <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={() => deleteUser(user.id)}>Delete</button>

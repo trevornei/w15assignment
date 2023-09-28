@@ -1,7 +1,11 @@
 import React from 'react'
 import FormInput from './FormInput'
 
-export default function Form({ postNewUser }) {
+export default function Form() {
+
+  function stopRefresh(event) {
+    event.preventDefault()
+  }
 
   return (
     <div className='h-auto absolute'>
@@ -23,7 +27,7 @@ export default function Form({ postNewUser }) {
                 <FormInput/>
             </div>
             {/*Profile Pic:*/}
-            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit'>Submit</button>
+            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit' onSubmit={stopRefresh}>Submit</button>
         </form>
     </div>
   )
