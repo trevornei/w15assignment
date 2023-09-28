@@ -11,10 +11,10 @@ export default function App() {
     <div className="w-screen h-screen flex flex-col items-center justify-start mx-3/4">
       <div className="flex flex-col items-center justify-center w-full h-24 bg-cyan-400 py-8 mb-20">
         <h1 className="text-3xl font-extrabold">
-            Welcome to the Super Duper Top Secret Users Data Base
+            Welcome to the Top Secret Users Data Base
         </h1>
-        <h3 className="text-lg font-bold">
-            Please don't alter this data for the love of god or else I am going to loose my job.
+        <h3 className="text-sm font-bold">
+            *Please don't alter this data for the love of god or else I am going to loose my job.
         </h3>
       </div>
       {/* <RandomImage src={KeyboardCat}/> */}

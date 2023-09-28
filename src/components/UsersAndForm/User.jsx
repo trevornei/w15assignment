@@ -21,7 +21,7 @@ export default function User({ user, deleteUser }) {
                   <img src={user.avatar} alt="Users Avatar" />
                 </div>
           </div>
-          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={() => deleteUser(user.id)}>Delete</button>
+          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={(user) => deleteUser(user.id)}>Delete</button>
       </div>
     </>
     
