@@ -8,7 +8,7 @@ export default function Form() {
   }
 
   return (
-    <div className='flex'>
+    <div className='flex m-20'>
         <form action="" className="w-3/5 h-3/4 bg-cyan-300 shadow-2xl shadow-emerald-300 rounded-r-3xl">
             {/* Select ID */}
             <div className="m-4">
@@ -26,7 +26,7 @@ export default function Form() {
                 <FormInput/>
             </div>
             {/*Profile Pic:*/}
-            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit' onSubmit={stopRefresh}>Submit</button>
+            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit' onSubmit={() => stopRefresh(event)}>Submit</button>
         </form>
     </div>
   )

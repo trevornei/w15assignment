@@ -60,6 +60,7 @@ export default function MeatAndPotatoesCont() {
   // Update Users data
   const [updateNewName, setUpdateNewName] = useState('')
   const [updateNewCompany, setUpdateNewCompany] = useState('')
+  console.log(users[4])
 
   const URL = 'https://650c446e47af3fd22f676202.mockapi.io/users'
   
@@ -78,13 +79,14 @@ export default function MeatAndPotatoesCont() {
     getUsers()
   }, [])  
 
-  const deleteUser = (e, userId) => {
-    fetch(`${URL}/${userId}`, {
+  const deleteUser = () => {
+    fetch(`${URL}/:${users.id}`, {
       method: "DELETE", 
       headers: {
         'content-type': 'application/json',
       },
     }) .then(() => getUsers)
+    console.log(`Deleting the user with the id: ${users.id}`)
   }
 
   const updateUser = (userObject) => {
@@ -123,12 +125,11 @@ export default function MeatAndPotatoesCont() {
   }
 
   return (
-    <div className='flex flex-col items-center justify-center w-full h-full bg-cyan-600 mx-32 p-32 rounfded-xl'>
-      <div className="">
-        <h1 className="text-3xl font-bold text-center text-white">Users and Form</h1>
-      </div>
+    <>
+    <div className='flex flex-col items-center justify-center w-full h-full rounfded-xl my-24'>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
         <FormCont postNewUser={postNewUser}/>    
     </div>
+  </>
   )
 }
