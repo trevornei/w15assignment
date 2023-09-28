@@ -12,9 +12,6 @@ export default function UsersCont({ deleteUser, updateUser, setUsers, users }) {
             
         ))}
     </div>
-    <div>
-      <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg'>Add New User</button>
-    </div>
     </>
   )
 }
