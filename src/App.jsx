@@ -17,9 +17,8 @@ export default function App() {
             *Please don't alter this data for the love of god or else I am going to loose my job.
         </h3>
       </div>
-      {/* <RandomImage src={KeyboardCat}/> */}
-      {/* 
       <RandomImage src={KeyboardCat}/>
+      {/* 
       <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/>
       <RandomImage src={KeyboardCat}/>

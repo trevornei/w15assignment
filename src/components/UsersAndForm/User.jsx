@@ -15,9 +15,6 @@ export default function User({ user, deleteUser }) {
     let lmnt = idVal -1;
   */
 
-    let idVal = parseInt(user.id);
-    console.log(`The value of id = ${idVal}`)
-    let lmnt = idVal -1;
   return (
     <>
       <div className='flex flex-col w-56 h-auto bg-slate-100 shadow-lg shadow-black rounded-xl p-2'>
@@ -35,9 +32,8 @@ export default function User({ user, deleteUser }) {
                   <img src={user.avatar} alt="Users Avatar" />
                 </div>
           </div>
-          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={(user) => deleteUser(user[lmnt])}>Delete</button>
+          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={() => deleteUser(user.id)}>Delete</button>
       </div>
     </>
-    
   )
 }

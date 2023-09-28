@@ -58,8 +58,8 @@ export default function MeatAndPotatoesCont() {
   const [newCompany, setNewCompany] = useState('')
 
   // Update Users data
-  const [updateNewName, setUpdateNewName] = useState('')
-  const [updateNewCompany, setUpdateNewCompany] = useState('')
+  // const [updateNewName, setUpdateNewName] = useState('')
+  // const [updateNewCompany, setUpdateNewCompany] = useState('')
   /*
     Delete user is not working because users.id is coming up as undefined.
     --> This was suprising to me at first because I did not take into account that users (state) method is pulling data from the API as an array of objects.
@@ -91,11 +91,11 @@ export default function MeatAndPotatoesCont() {
       company: updateNewCompany,
     }
 
-    fetch(`${URL}/${userId}`, {
+    fetch(`${URL}/${userObject.id}`, {
       method: "PUT",
-      body: JSON.stringify({
+      body: JSON.stringify(
         updatedUserObject
-      }),
+      ),
       headers: {
         'content-type': 'application/json',
       },
@@ -117,14 +117,14 @@ export default function MeatAndPotatoesCont() {
     }) .then(() => getUsers())
   }
 
-  const deleteUser = () => {
-    fetch(`${URL}/:${users}`, {
+  const deleteUser = (userId) => {
+    fetch(`${URL}/${userId}`, {
       method: "DELETE", 
       headers: {
         'content-type': 'application/json',
       },
-    }) .then(() => getUsers)
-    console.log(`Deleting the user with the id: ${users.id}`)
+    }) .then(() => getUsers())
+    console.log(`Deleting the userId with the id: ${userId}`)
   }
 
   return (
