@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function FormInput({ label, ...rest}) {
+export default function FormInput({ }) {
   return (
     <div>
-        <label htmlFor="rest.id" className=""></label>
-        <input type="text" className="" {...rest} />
+        <input type="text" className="" />
     </div>
   )
 }
