@@ -52,7 +52,15 @@ export default function MeatAndPotatoesCont() {
   */
 
   const [users, setUsers] = useState([{}])
+  
+  // Create new users information.
   const [newName, setNewName] = useState('')
+  const [newCompany, setNewCompany] = useState('')
+
+  // Update Users data
+  const [updateNewName, setUpdateNewName] = useState('')
+  const [updateNewCompany, setUpdateNewCompany] = useState('')
+
   const URL = 'https://650c446e47af3fd22f676202.mockapi.io/users'
   
   const getUsers = () => {
@@ -69,54 +77,34 @@ export default function MeatAndPotatoesCont() {
   useEffect(() => {
     getUsers()
   }, [])  
-  
-  // How do I create a make users function that will update the state of users?
-  //  const makeUsers = () => {
-  //    fetch(URL, {
-  //      method: "POST",
-  //      headers: {
-  //        'content-type': 'application/json',
-  //      }, 
-  //      body: JSON.stringify({
-  //        name: newName,
-  //      })
-  //    })
-  //      .then((response) => response.json())
-  //      .then((data) => {
-  //        console.log("API Data:", data);
-  //        setUsers(data)
-  //      })
-  //  }
 
   const deleteUser = (e, userId) => {
-    e.preventDefault()
     fetch(`${URL}/${userId}`, {
       method: "DELETE", 
       headers: {
         'content-type': 'application/json',
       },
-    }) .then((response) => {
-      if (response.status === 200) {
-        setUsers(users.filter((person) => person.id !== users.id))
-      }
-    })
+    }) .then(() => getUsers)
   }
 
-  const updateUser = () => {
+  const updateUser = (userObject) => {
+
+    let updatedUserObject = {
+      // spreads out key value pairs from an existing object.
+      ...userObject,
+      name: updateNewName,
+      company: updateNewCompany,
+    }
 
     fetch(`${URL}/${userId}`, {
       method: "PUT",
       body: JSON.stringify({
-        name: newName,
+        updatedUserObject
       }),
       headers: {
         'content-type': 'application/json',
       },
-    }) .then((response) => {
-      if (response.status === 200) {
-        setUsers(users.map((person) => person.id === users.id ? users : person))
-      }
-    })
+    }) .then(() => getUsers())
   }
 
   const postNewUser = () => {
@@ -131,15 +119,11 @@ export default function MeatAndPotatoesCont() {
         'content-type': 'application/json',
       },
       body: JSON.stringify(data)
-    }) .then((response) => {
-      if (response.status === 200) {
-        setUsers([...users, data])
-      }
-    })
+    }) .then(() => getUsers())
   }
 
   return (
-    <div className='flex flex-col items-center justify-center w-full h-full bg-cyan-600 mx-auto rounfded-xl'>
+    <div className='flex flex-col items-center justify-center w-full h-full bg-cyan-600 mx-32 p-32 rounfded-xl'>
       <div className="">
         <h1 className="text-3xl font-bold text-center text-white">Users and Form</h1>
       </div>
