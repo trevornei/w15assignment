@@ -60,6 +60,10 @@ export default function MeatAndPotatoesCont() {
   // Update Users data
   const [updateNewName, setUpdateNewName] = useState('')
   const [updateNewCompany, setUpdateNewCompany] = useState('')
+  /*
+    Delete user is not working because users.id is coming up as undefined.
+    --> This was suprising to me at first because I did not take into account that users (state) method is pulling data from the API as an array of objects.
+  */
   console.log(users[4])
 
   const URL = 'https://650c446e47af3fd22f676202.mockapi.io/users'
