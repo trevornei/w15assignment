@@ -4,6 +4,20 @@ import React from 'react'
 export default function User({ user, deleteUser }) {
   // console.log(`${users} from User.jsx`)
   // console.log(user)
+
+  /*
+    Solving For: id evaluating as unidentified.
+    -> I can select by the id || the element's index.
+    --> The element's index is id - 1;
+
+    Create a variable idVal;
+    assign it a value of users.id;
+    let lmnt = idVal -1;
+  */
+
+    let idVal = parseInt(user.id);
+    console.log(`The value of id = ${idVal}`)
+    let lmnt = idVal -1;
   return (
     <>
       <div className='flex flex-col w-56 h-auto bg-slate-100 shadow-lg shadow-black rounded-xl p-2'>
@@ -21,7 +35,7 @@ export default function User({ user, deleteUser }) {
                   <img src={user.avatar} alt="Users Avatar" />
                 </div>
           </div>
-          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={(user) => deleteUser(user.id)}>Delete</button>
+          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={(user) => deleteUser(user[lmnt])}>Delete</button>
       </div>
     </>
     
