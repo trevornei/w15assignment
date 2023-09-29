@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './FormFormMrof/Form'
+import Form from './Form'
 
 export default function FormCont() {
   return (
