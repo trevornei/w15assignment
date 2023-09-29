@@ -83,10 +83,11 @@ export default function MeatAndPotatoesCont() {
   }, [])  
 
   const updateUser = (userObject) => {
-
+    
     let updatedUserObject = {
       // spreads out key value pairs from an existing object.
       ...userObject,
+      id: null,
       name: null,
       company: null,
     }
@@ -131,7 +132,7 @@ export default function MeatAndPotatoesCont() {
     <>
     <div className='flex flex-col items-center justify-center w-full h-full rounfded-xl my-24'>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
-        <FormCont postNewUser={postNewUser}/>    
+        <FormCont updateUser={updateUser}/>    
     </div>
   </>
   )
