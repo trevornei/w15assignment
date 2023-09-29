@@ -87,8 +87,8 @@ export default function MeatAndPotatoesCont() {
     let updatedUserObject = {
       // spreads out key value pairs from an existing object.
       ...userObject,
-      name: updateNewName,
-      company: updateNewCompany,
+      name: null,
+      company: null,
     }
 
     fetch(`${URL}/${userObject.id}`, {

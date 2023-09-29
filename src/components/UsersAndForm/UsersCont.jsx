@@ -9,7 +9,6 @@ export default function UsersCont({ deleteUser, updateUser, setUsers, users }) {
           <div key={index} className='mt-4'>
             <User user={user} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
           </div>
-            
         ))}
     </div>
     </>
