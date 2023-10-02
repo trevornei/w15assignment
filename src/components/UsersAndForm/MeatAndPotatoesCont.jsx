@@ -132,7 +132,7 @@ export default function MeatAndPotatoesCont() {
     <>
     <div className='flex flex-col items-center justify-center w-full h-full rounfded-xl my-24'>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
-        <FormCont updateUser={updateUser}/>    
+        <FormCont postNewUser={postNewUser}/>    
     </div>
   </>
   )
