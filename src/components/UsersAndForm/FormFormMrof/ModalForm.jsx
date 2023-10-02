@@ -2,10 +2,10 @@ import React from 'react'
 import FormInput from './FormInput'
 import UpdateUserTitle from './UpdateUserTitle'
 
-export default function Form({ postNewUser}) {
+export default function Form({ postNewUser, setNewName, setNewCompany}) {
 
-  function handleUpdateSubmit(event) {
-    event.preventDefault()
+  function handleUpdateSubmit(e) {
+    e.preventDefault()
     postNewUser()
   }
 
@@ -17,15 +17,15 @@ export default function Form({ postNewUser}) {
             {/* Name */}
             <div className="m-4">
                 <label htmlFor="" className="font-bold">Name: </label>
-                <FormInput/>
+                <input type="text" className="" onChange={(e) => setNewName(e.target.value)}/>
             </div>
             {/* Company */}
             <div className="m-4">
                 <label htmlFor="" className="font-bold">Company: </label>
-                <FormInput/>
+                <input type="text" className="" onChange={(e) => setNewCompany(e.target.value)}/>
             </div>
             {/*Profile Pic:*/}
-            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit'>Submit</button>
+            <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit' onClick={postNewUser}>Submit</button>
         </form>
       </div>
     </>

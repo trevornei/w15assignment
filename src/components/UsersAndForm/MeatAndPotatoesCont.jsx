@@ -103,10 +103,15 @@ export default function MeatAndPotatoesCont() {
     }) .then(() => getUsers())
   }
 
-  const postNewUser = () => {
+  const postNewUser = (e) => {
+    e.preventDefault()
+
+    console.log(`Your Name is: ${newName}`)
+    console.log(`Your Company is: ${newCompany}`)
 
     let data = {
-      name: newName,
+      name: setNew,
+      company: newCompany,
     }
 
     fetch(URL, {
@@ -132,7 +137,7 @@ export default function MeatAndPotatoesCont() {
     <>
     <div className='flex flex-col items-center justify-center w-full h-full rounfded-xl my-24'>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
-        <FormCont postNewUser={postNewUser}/>    
+        <FormCont postNewUser={postNewUser} setNewName={setNewName} setNewCompany={setNewCompany}/>    
     </div>
   </>
   )
