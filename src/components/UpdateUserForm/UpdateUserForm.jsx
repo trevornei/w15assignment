@@ -1,5 +1,4 @@
 import React from 'react'
-import ModalFormInput from './ModalFormInput'
 
 export default function ModalForm() {
   return (
@@ -8,17 +7,17 @@ export default function ModalForm() {
             {/* Select ID */}
             <div className="m-4">
                 <label htmlFor="" className="font-bold">Select ID: </label>
-                <ModalFormInput/>
+                <input type="text" />
             </div>
             {/* Name */}
             <div className="m-4">
-                <label htmlFor="" className="font-bold">Name: </label>
-                <ModalFormInput/>
+                <label htmlFor="" className="font-bold">Update Name: </label>
+                <input type="text" />
             </div>
             {/* Company */}
             <div className="m-4">
-                <label htmlFor="" className="font-bold">Company: </label>
-                <ModalFormInput/>
+                <label htmlFor="" className="font-bold">Update Company: </label>
+                <input type="text" />
             </div>
             {/*Profile Pic:*/}
             <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit'>Submit</button>

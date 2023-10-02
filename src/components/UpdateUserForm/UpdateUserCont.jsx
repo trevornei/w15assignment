@@ -1,13 +1,13 @@
 import React from "react";
-import ModalTitle from "./ModalTitle";
-import ModalForm from "./ModalForm";
+import UpdateUserFormTitle from './UpdateUserFormTitle'
+import UpdateUserForm from './UpdateUserForm'
 
 
 export default function UpdateUserCont() {
     return( 
         <>
-            <ModalTitle/>
-            <ModalForm/>
+            <UpdateUserFormTitle/>
+            <UpdateUserForm/>
         </>
     )
 }

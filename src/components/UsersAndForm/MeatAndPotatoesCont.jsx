@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import UsersCont from './UsersCont'
 import FormCont from './FormFormMrof/FormCont'
+import UpdateUserCont from '../../components/UpdateUserForm/UpdateUserCont'
 
 export default function MeatAndPotatoesCont() {
 
@@ -82,8 +83,10 @@ export default function MeatAndPotatoesCont() {
     getUsers()
   }, [])  
 
-  const updateUser = (userObject) => {
-    
+  const updateUser = (userObject, e) => {
+    e.preventDefault()
+
+
     let updatedUserObject = {
       // spreads out key value pairs from an existing object.
       ...userObject,
@@ -137,6 +140,7 @@ export default function MeatAndPotatoesCont() {
     <>
     <div className='flex flex-col items-center justify-center w-full h-full rounded-xl my-24'>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
+        <UpdateUserCont/>
         <FormCont postNewUser={postNewUser} setNewName={setNewName} setNewCompany={setNewCompany}/>    
     </div>
   </>
