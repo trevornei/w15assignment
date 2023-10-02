@@ -3,7 +3,7 @@ import ModalTitle from "./ModalTitle";
 import ModalForm from "./ModalForm";
 
 
-export default function Modal() {
+export default function UpdateUserCont() {
     return( 
         <>
             <ModalTitle/>

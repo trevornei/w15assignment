@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './ModalForm'
+import Form from './PostUserForm'
 
 export default function FormCont({ postNewUser, setNewName, setNewCompany }) {
   return (
