@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './Form'
+import Form from './ModalForm'
 
 export default function FormCont({ updateUser }) {
   return (
