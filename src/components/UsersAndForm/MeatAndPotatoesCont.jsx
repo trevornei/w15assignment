@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import UsersCont from './UsersCont'
 import FormCont from './FormFormMrof/FormCont'
 import UpdateUserCont from './UpdateUserForm/UpdateUserCont'
+import UsersTitle from './UserComp/UsersTitle'
 
 export default function MeatAndPotatoesCont() {
 
@@ -103,7 +104,8 @@ export default function MeatAndPotatoesCont() {
 
   return (
     <>
-    <div className='flex flex-col items-center justify-center w-full h-full rounded-xl my-24'>
+    <div className='flex flex-col items-center justify-center w-full h-full rounded-xl '>
+        <UsersTitle/>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
         <UpdateUserCont updateUser={updateUser} setSelectedId={setSelectedId} setUpdatedName={setUpdatedName} setUpdatedCompany={setUpdatedCompany} />
         <FormCont postNewUser={postNewUser} setNewName={setNewName} setNewCompany={setNewCompany}/>    
