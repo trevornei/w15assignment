@@ -6,52 +6,6 @@ import UpdateUserCont from './UpdateUserForm/UpdateUserCont'
 
 export default function MeatAndPotatoesCont() {
 
-  /*
-    Here is the array of objects that is being fetched from the API:
-    [
- {
-  "name": "Leon Hagenes",
-  "id": "1"
- },
- {
-  "name": "Tyler Quigley",
-  "id": "2"
- },
- {
-  "name": "Dr. Joanne Grimes",
-  "id": "3"
- },
- {
-  "name": "Dr. Julia Schuppe PhD",
-  "id": "4"
- },
- {
-  "name": "Lyle Gorczany",
-  "id": "5"
- },
- {
-  "name": "Taylor Hirthe",
-  "id": "6"
- },
- {
-  "name": "Kelli Morissette",
-  "id": "7"
- },
- {
-  "name": "Douglas Harris",
-  "id": "8"
- },
- {
-  "name": "Lisa Kozey",
-  "id": "9"
- },
- {
-  "name": "Josephine Kunde",
-  "id": "10"
- }
-]
-  */
-
   const [users, setUsers] = useState([{}])
   
   // Create new users information.
@@ -91,8 +45,6 @@ export default function MeatAndPotatoesCont() {
   const updateUser = (e, userObject) => {
     e.preventDefault()
 
-    
-
     console.log(`The user ID that you selected: ${selectedId}`)
     console.log(`Your updated name: ${updatedName}`)
     console.log(`Your updated company: ${updatedName}`)
@@ -108,7 +60,7 @@ export default function MeatAndPotatoesCont() {
     
     console.log(updatedUserObject)
 
-    fetch(`${URL}/users/${selectedId}`, {
+    fetch(`${URL}/${selectedId}`, {
       method: "PUT",
       body: JSON.stringify(
         updatedUserObject

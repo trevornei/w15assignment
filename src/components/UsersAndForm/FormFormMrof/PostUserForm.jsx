@@ -23,7 +23,6 @@ export default function Form({ postNewUser, setNewName, setNewCompany}) {
                 <label htmlFor="" className="font-bold">Company: </label>
                 <input type="text" className="" onChange={(e) => setNewCompany(e.target.value)}/>
             </div>
-            {/*Profile Pic:*/}
             <button className="mx-16 bg-emerald-300 rounded-2xl px-3 py-1" type='submit' onClick={postNewUser}>Submit</button>
         </form>
       </div>
