@@ -17,7 +17,7 @@ export default function User({ user, deleteUser }) {
 
   return (
     <>
-      <div className='flex flex-col w-56 h-auto bg-slate-100 shadow-lg shadow-black rounded-xl p-2 m-6'>
+      <div className='flex flex-col w-56 h-auto bg-green-400 shadow-lg shadow-black rounded-xl p-2 m-6'>
           <div className="flex flex-col items-center justify-center p-2 bg-slate-200 rounded-xl">
                 <div className="p-2 flex items-center justify-center">
                   <h3 className="text-md font-extrabold">ID: {user.id}</h3>
@@ -32,7 +32,7 @@ export default function User({ user, deleteUser }) {
                   <img src={user.avatar} alt="Users Avatar" className='rounded-xl shadow-lg shadow-blue-200 mx-auto' />
                 </div>
           </div>
-          <button className='bg-cyan-800 shadow-md shadow-white text-white rounded-lg' onClick={() => deleteUser(user.id)}>Delete</button>
+          <button className='bg-cyan-800 text-white rounded-lg mt-4' onClick={() => deleteUser(user.id)}>Delete</button>
       </div>
     </>
   )

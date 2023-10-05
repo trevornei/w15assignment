@@ -11,10 +11,10 @@ export default function Nav() {
                     <Link to="/" >Home</Link>
                 </li>
                 <li className='m-6 font-extrabold text-2xl'>
-                    <Link to="about" element={<About />}>About</Link>
+                    <Link to="/about" element={<About />}>About</Link>
                 </li>
                 <li className='m-6 font-extrabold text-2xl'>
-                    <Link to="contact" element={<Contact />}>Contact</Link>
+                    <Link to="/contact" element={<Contact />}>Contact</Link>
                 </li>
             </ul>
         </div>
