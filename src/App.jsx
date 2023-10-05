@@ -2,6 +2,7 @@ import { React } from 'react'
 import MeatAndPotatoesCont from './components/UsersAndForm/MeatAndPotatoesCont'
 import RandomImage from './RandomImage'
 import KeyboardCat from './assets/Keyboard_cat.jpg'
+import Nav from './components/UsersAndForm/Nav'
 
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-start mx-3/4 p-12">
+      <Nav/>
       <RandomImage src={KeyboardCat}/>
       <MeatAndPotatoesCont/>
 

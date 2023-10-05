@@ -3,7 +3,7 @@ import React from 'react'
 export default function ModalForm({ updateUser, setSelectedId, setUpdatedName, setUpdatedCompany, userObject }) {
   return (
     <>
-        <form action="" className="w-3/5 h-3/4 bg-cyan-300 shadow-2xl shadow-emerald-300 rounded-r-3xl">
+        <form action="" className="w-3/5 h-3/4 bg-cyan-300 shadow-2xl shadow-emerald-300 rounded-r-3xl my-8">
             {/* Select ID */}
             <div className="m-4">
                 <label htmlFor="" className="font-bold">Select ID: </label>
