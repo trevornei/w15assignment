@@ -6,7 +6,8 @@ import Contact from '../../Pages/Contact/Contact'
 export default function Nav() {
   return (
     <>
-        <div className="fixed bg-emerald-400 w-full mix-blend-multiply h-auto">            <ul className='flex flex-row float-right p-6 z-10'>
+        <div className="fixed bg-emerald-400 w-full mix-blend-multiply h-auto backdrop-blur-lg">            
+            <ul className='flex flex-row float-right p-6 z-10'>
                 <li className='m-6 font-extrabold text-2xl'>
                     <Link to="/" >Home</Link>
                 </li>

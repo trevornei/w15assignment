@@ -11,7 +11,7 @@ export default function About() {
                 <p className="first-line:uppercase first-line:tracking-widest
     first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900
     first-letter:mr-3 first-letter:float-left">
-                    About Our User Database
+    About Our User Database
     Pioneering the Next Generation of User Management
     Welcome to Users Database, the premier user database trusted by businesses and developers around the world. Our platform is dedicated to providing a seamless, efficient, and secure way to manage user data for any application or system.
     <br></br>
