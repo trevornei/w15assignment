@@ -1,8 +1,15 @@
-# React + Vite
+# Welcome to my Final Assignment: Users Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React app connects to mock api and executes all CRUD operations.
+The app displays users data on the landing page where you can: 
+- Create a new user
+- Read/Get users
+- Update users
+- Delete users
 
-Currently, two official plugins are available:
+# Install to Run: 
+- React
+- React Router DOM
+- Vite
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
