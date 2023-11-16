@@ -4,6 +4,7 @@ import UsersCont from './UsersCont'
 import FormCont from './FormFormMrof/FormCont'
 import UpdateUserCont from './UpdateUserForm/UpdateUserCont'
 import UsersTitle from './UserComp/UsersTitle'
+import UpdateAndCreateContainer from '../UpdateAndCreate/UpdateAndCreateContainer'
 
 export default function MeatAndPotatoesCont() {
 
@@ -104,12 +105,11 @@ export default function MeatAndPotatoesCont() {
 
   return (
     <>
-    <div className='flex flex-col items-center justify-center w-3/4 h-full mx-auto rounded-2xl mt-40'>
-        <UsersTitle/>
-        <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
-        <UpdateUserCont updateUser={updateUser} setSelectedId={setSelectedId} setUpdatedName={setUpdatedName} setUpdatedCompany={setUpdatedCompany} />
-        <FormCont postNewUser={postNewUser} setNewName={setNewName} setNewCompany={setNewCompany}/>    
-    </div>
-  </>
+      <div className='flex flex-col items-center justify-center w-3/4 h-full mx-auto rounded-2xl mt-40'>
+          <UsersTitle/>
+          <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
+          <UpdateAndCreateContainer updateUser={updateUser} setSelectedId={setSelectedId} setUpdatedName={setUpdatedName} setUpdatedCompany={setUpdatedCompany} postNewUser={postNewUser} setNewName={setNewName} setNewCompany={setNewCompany}/>
+      </div>
+    </>
   )
 }
