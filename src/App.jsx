@@ -23,7 +23,7 @@ export default function App() {
         </Route>
       </Routes>
       
-      <RandomImage src={KeyboardCat}/>
+      {/* <RandomImage src={KeyboardCat}/> */}
     </div>
   )
 }

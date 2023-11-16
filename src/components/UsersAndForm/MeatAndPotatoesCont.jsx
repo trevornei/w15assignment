@@ -104,7 +104,7 @@ export default function MeatAndPotatoesCont() {
 
   return (
     <>
-    <div className='flex flex-col items-center justify-center w-full h-full rounded-xl mt-40'>
+    <div className='flex flex-col items-center justify-center w-3/4 h-full mx-auto rounded-2xl mt-40'>
         <UsersTitle/>
         <UsersCont users={users} setUsers={setUsers} deleteUser={deleteUser}  updateUser={updateUser}/>
         <UpdateUserCont updateUser={updateUser} setSelectedId={setSelectedId} setUpdatedName={setUpdatedName} setUpdatedCompany={setUpdatedCompany} />
